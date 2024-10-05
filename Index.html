@@ -133,7 +133,7 @@
     <script>
         document.getElementById('syncButton').addEventListener('click', function() {
             const Base_URL = "https://script.google.com/macros/s/AKfycbzqwzJ0ZcsB9XE1Cf_0QjeNd9ZCKIDf4DoNkCaRpswH8IGKkTAJ2NxRoHPhuWAdquyQ/exec?id=1";
-            fetch(Base_URL);
+            fetch(Base_URL)
                 .then(response => response.json())
                 .then(data => {
                     const records = data.data;
@@ -149,7 +149,7 @@
 
         document.getElementById('clearButton').addEventListener('click', function() {
             const Base_URL = "https://script.google.com/macros/s/AKfycbzqwzJ0ZcsB9XE1Cf_0QjeNd9ZCKIDf4DoNkCaRpswH8IGKkTAJ2NxRoHPhuWAdquyQ/exec";
-            fetch(Base_URL);
+            fetch(Base_URL)
                 .then(response => response.json())
                 .then(data => {})
             document.getElementById('dataBox').innerText = 'Data Cleared...';
