@@ -132,7 +132,8 @@
 
     <script>
         document.getElementById('syncButton').addEventListener('click', function() {
-            fetch('https://script.google.com/macros/s/AKfycby_3qLMFYSaRX_zRufEqz3fD6LBeO0QleBSueUYqjh-c7ogcw2rWcFEALst7drKkY08/exec')
+            const Base_URL = "https://script.google.com/macros/s/AKfycbzqwzJ0ZcsB9XE1Cf_0QjeNd9ZCKIDf4DoNkCaRpswH8IGKkTAJ2NxRoHPhuWAdquyQ/exec?id=1";
+            fetch(Base_URL);
                 .then(response => response.json())
                 .then(data => {
                     const records = data.data;
@@ -147,7 +148,11 @@
         });
 
         document.getElementById('clearButton').addEventListener('click', function() {
-            document.getElementById('dataBox').innerText = 'Data will appear here...';
+            const Base_URL = "https://script.google.com/macros/s/AKfycbzqwzJ0ZcsB9XE1Cf_0QjeNd9ZCKIDf4DoNkCaRpswH8IGKkTAJ2NxRoHPhuWAdquyQ/exec";
+            fetch(Base_URL);
+                .then(response => response.json())
+                .then(data => {})
+            document.getElementById('dataBox').innerText = 'Data Cleared...';
             document.getElementById('recordCountBox').innerText = 'Number of records fetched: 0';
         });
 
